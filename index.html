@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexBox</title>
+	<style>
+		body{
+			background: gray;
+			display: flex;
+			padding: 0;
+			margin: 0;
+		}
+		
+		[class^="cara__"]{
+			background: white;
+			display: flex;
+			height: 120px;
+			margin: 10px;
+			padding: 20px;
+			width: 120px;
+		}
+
+		[class="punto"]{
+			background: black;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+		}
+		.cara__1{
+			align-items:center;
+			justify-content:center;
+		}
+		.cara__2{
+			justify-content:space-between;
+		}
+			.cara__2 .punto:nth-child(2){
+				align-self:flex-end;
+			}
+		.cara__3{
+			justify-content:space-between;
+		}
+			.cara__3 .punto:nth-child(2){
+				align-self:center;
+			}
+			.cara__3 .punto:nth-child(3){
+				align-self:flex-end;
+			}
+		.cara__4{
+			justify-content:space-between;
+		}
+			.cara__4 article{
+				display: flex;
+				flex-direction:column;
+				justify-content:space-between;
+			}
+		.cara__5{
+			justify-content:space-between;
+		}
+			.cara__5 > .punto{
+				align-self:center;
+			}
+			.cara__5 article{
+				display: flex;
+				flex-direction:column;
+				justify-content:space-between;
+			}
+		.cara__6{
+			justify-content:space-between;
+		}
+			.cara__6 article{
+				display: flex;
+				flex-direction:column;
+				justify-content:space-between;
+			}			
+	</style>
+</head>
+<body>
+	<section class="cara__1">
+		<section class="punto"></section>
+	</section>
+
+	<section class="cara__2">
+		<section class="punto"></section>
+		<section class="punto"></section>
+	</section>
+
+	<section class="cara__3">
+		<section class="punto"></section>
+		<section class="punto"></section>
+		<section class="punto"></section>
+	</section>
+
+	<section class="cara__4">
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+	</section>
+	<section class="cara__5">
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+			<section class="punto"></section>
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+	</section>
+	<section class="cara__6">
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+		<article>
+			<section class="punto"></section>
+			<section class="punto"></section>
+			<section class="punto"></section>
+		</article>
+	</section>
+</body>
+</html>
